@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>My Map</title>
+<meta name="author" content="Michail Mazo michail.mazo@gmail.com" />
+<script type="text/javascript" src="javascripts/lib/prototype.js"></script>
+<script type="text/javascript" src="javascripts/lib/scriptaculous.js"></script>
+<script type="text/javascript" src="javascripts/classes/string_truncator.js"></script>
+<script type="text/javascript" src="javascripts/classes/popup.js"></script>
+<script type="text/javascript" src="javascripts/classes/image_upload_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/login_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/map_element_reservate_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/map_element_reserved_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/map_element_settings_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/message_alert_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/my_map_elements_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/register_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/search_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/user_page_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/user_page_settings_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/map_element_preview_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/map_navigator.js"></script>
+<script type="text/javascript" src="javascripts/classes/about_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/daily_news.js"></script>
+<script type="text/javascript" src="javascripts/classes/help_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/raitings_and_statistics_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/menu_dialog.js"></script>
+<script type="text/javascript" src="javascripts/classes/map_element.js"></script>
+<script type="text/javascript" src="javascripts/classes/map_elements.js"></script>
+<script type="text/javascript" src="javascripts/mymap.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/mymap.css">
+</head>
+    <body onload="onPageLoad();">
+        <div id="map_wrapper">
+            <div id="map">
+            </div>
+        </div>
+		<div id="nav_panel_bcg"></div>
+		<div id="nav_panel">
+			<div id="np_header"></div>
+			<div id="np_menu_toggler" class="menuLine300x15"></div>
+			<div id="np_menu_wrapper">
+				<div id='header_menu'></div>
+			</div>
+			<div id="np_navigator_toggler" class="menuLine300x15"></div>
+			<div id="np_navigator_wrapper"></div>
+			<div id="test_params" >
+				buildings: <label id="buildings_nr">-</label> | terrains: <label id="terrains_nr">-</label> <br/>
+				x: <label id="mouse_x">-</label> y: <label id="mouse_y">-</label> |
+				mx: <label id="map_x">-</label> my: <label id="map_y">-</label> <br/> 
+				w: <label id="win_width">-</label> h: <label id="win_height">-</label> | 
+				mw: <label id="map_width">-</label> mh: <label id="map_height">-</label> <br/>
+				cpt: <label id="cp_top">-</label> cpl: <label id="cp_left">-</label> | 
+				mmt: <label id="mm_top">-</label> mml: <label id="mm_left">-</label>
+			</div>
+			<div id="credentials">
+				Idea, Design and Implementation by Michail Mazo
+				<br/>
+				(michail.mazo@gmail.com).
+				<br/>
+				All rights reserved.
+				<br/>
+				2007-2008.
+			</div>
+		</div>		
+		<div id="curtain" class="disable_screen"></div>
+		<div id="initial_load">
+			<img src="images/spinner.gif" class="spinner" />
+		</div>
+    </body>
+</html>

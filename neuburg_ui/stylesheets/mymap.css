@@ -1,0 +1,720 @@
+html{
+width: 100%;
+height:100%;
+overflow:hidden;
+overflow-y:hidden;
+overflow-x:hidden;
+margin:0;
+padding:0;
+border:0 none;
+}
+
+body{
+border:0 none;
+background-color:#ffffff;
+margin:0;
+padding:0 0 0 0;
+text-align:left;
+width:100%;
+height:100%;
+overflow:hidden;
+overflow-y:hidden;
+overflow-x:hidden;
+font-family: Tahoma,Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+
+#map_wrapper{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	max-width:100%;
+	max-height:100%;
+	overflow:hidden;
+	border:none;
+	z-index:1;
+}
+
+#map{
+	position:absolute;
+	top:0px;
+	left:0px;
+	margin-left:0px;
+	margin-top:0px;	
+	width:30px;
+	height:30px;
+	border:none;
+	/*cursor:move;*/
+	z-index:0;
+}
+
+.terrain{
+	z-index:0 !important;
+}
+
+
+.building{
+	z-index:3 !important;
+}
+
+.map_default{
+	position:absolute;
+	top:0px;
+	left:0px;
+	margin-left:0px;
+	margin-top:0px;
+	background-image:url('../images/default_background.gif');
+	background-repeat:repeat;
+	border:none;
+	/*cursor:move;*/
+	z-index:0;
+}
+
+
+#header{
+	position:absolute;
+	top:0px;
+	left:50%;
+	margin-left:-400px;
+	width:800px;
+	height:200px;
+	max-width:800px;
+	max-height:200px;
+	padding:0px 0px 0px 0px;
+	z-index:2;
+	background-color:#dfdfdd;
+	background-image:url('../images/header.gif');
+	background-repeat:no-repeat;
+	background-position: 0px 0px;
+}
+
+
+#test_params{
+	text-align:center;
+	padding:5px 5px 5px 5px;
+	z-index:2;
+	color:#000000;
+}
+
+#credentials{
+	text-align:center;
+	padding:5px 5px 5px 5px;
+	z-index:2;
+	color:#000000;
+}
+
+#header_hide_button{
+	position:relative;
+	top:184px;
+	left:0px;
+	background-color:transparent;
+	border:none;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	width:22px;
+	height:22px;
+	cursor:pointer;
+}
+
+#wind_rose{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:87px;
+	height:77px;
+	max-width:87px;
+	max-height:77px;
+	overflow:hidden;
+	background-image:url('../images/compass.gif');
+	background-repeat:no-repeat;
+    background-color: #dfdfdd;
+	border: 2px solid #ffffff;
+	z-index:3;
+}
+
+#go_nord{
+	background-color:transparent;
+	border:none;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	width:87px;
+	height:25px;
+	cursor:pointer;
+}
+
+#go_west{
+	background-color:transparent;
+	border:none;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	width:44px;
+	height:27px;
+	cursor:pointer;
+}
+
+#go_east{
+	background-color:transparent;
+	border:none;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	width:43px;
+	height:27px;
+	cursor:pointer;
+}
+
+#go_south{
+	background-color:transparent;
+	border:none;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	width:87px;
+	height:25px;
+	cursor:pointer;
+}
+
+.nav_row{
+	width:87px;
+	height:25px;
+	max-width:87px;
+	max-height:25px;
+	overflow:hidden;
+	background-color:transparent;
+	border:none;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+}
+
+.nav_row_mid{
+	width:87px;
+	height:27px;
+	max-width:87px;
+	max-height:25px;
+	overflow:hidden;
+	background-color:transparent;
+	border:none;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+}
+
+.nav_row_mid_left{
+	width:44px;
+	height:27px;
+	max-width:44px;
+	max-height:25px;
+	overflow:hidden;
+	background-color:transparent;
+	border:none;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	float:left;
+}
+.nav_row_mid_right{
+	width:43px;
+	height:27px;
+	max-width:43px;
+	max-height:25px;
+	overflow:hidden;
+	background-color:transparent;
+	border:none;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	float:right;
+}
+
+.menu_closed{
+	position:absolute;
+	width:28px;
+	height:28px;
+	max-width:28px;
+	max-height:28px;
+	overflow:hidden;
+	background-image:url('../images/menu.gif');
+	background-repeat:no-repeat;
+	background-position:0px -28px;
+	border:none;
+	background-color:transparent;
+	z-index:3;
+	cursor:pointer;
+}
+
+.menu_open{
+	position:absolute;
+	width:28px;
+	height:28px;
+	max-width:28px;
+	max-height:28px;
+	overflow:hidden;
+	background-image:url('../images/menu.gif');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	border:none;
+	background-color:transparent;
+	z-index:3;
+	cursor:pointer;
+}
+
+#login_logout{
+	position:absolute;
+	width:28px;
+	height:28px;
+	max-width:28px;
+	max-height:28px;
+	overflow:hidden;
+	border:none;
+	background-color:transparent;
+	z-index:3;
+	cursor:pointer;
+}
+
+.login{
+	background-image:url('../images/login_logout.gif');
+	background-repeat:no-repeat;
+	background-position:0px -28px;
+	cursor:pointer;
+}
+
+.logout{
+	background-image:url('../images/login_logout.gif');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	cursor:pointer;
+}
+
+#map_overview{
+	position:absolute;
+	width:28px;
+	height:28px;
+	max-width:28px;
+	max-height:28px;
+	overflow:hidden;
+	background-image:url('../images/search_map_overview.gif');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	border:none;
+	background-color:transparent;
+	z-index:3;
+	cursor:pointer;
+}
+
+#register_settings{
+	position:absolute;
+	width:28px;
+	height:28px;
+	max-width:28px;
+	max-height:28px;
+	overflow:hidden;
+	border:none;
+	background-color:transparent;
+	z-index:3;
+	cursor:pointer;
+}
+
+.register{
+	background-image:url('../images/register_settings.gif');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	cursor:pointer;
+}
+
+.settings{
+	background-image:url('../images/register_settings.gif');
+	background-repeat:no-repeat;
+	background-position:0px -28px;
+	cursor:pointer;
+}
+
+#search{
+	position:absolute;
+	width:28px;
+	height:28px;
+	max-width:28px;
+	max-height:28px;
+	overflow:hidden;
+	background-image:url('../images/search_map_overview.gif');
+	background-repeat:no-repeat;
+	background-position:0px -28px;
+	border:none;
+	background-color:transparent;
+	z-index:3;
+	cursor:pointer;
+}
+
+#dialog{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:200px;
+	height:250px;
+	max-width:200px;
+	max-height:250px;
+	overflow:hidden;
+	margin-left:-100px;
+	margin-top:-125px;
+	border:2px solid #fe9e2d;
+	background-color:#f6fae9;
+	z-index:5;
+}
+
+#dialog_header{
+	width:200px;
+	height:28px;
+	max-width:200px;
+	max-height:28px;
+	overflow:hidden;
+	border:none;
+	cursor:default;
+	background-color:#f6fae9;
+}
+
+#dialog_content{
+	width:200px;
+	height:222px;
+	max-width:200px;
+	max-height:222px;
+	overflow:auto;
+	border:none;
+	cursor:default;
+	background-color:#f6fae9;
+	padding: 5px 5px 5px 5px;
+}
+
+#close{
+	position:absolute;
+	width:16px;
+	height:16px;
+	max-width:16px;
+	max-height:16px;
+	overflow:hidden;
+	background-image:url('../images/close.gif');
+	background-repeat:no-repeat;
+	border:none;
+	background-color:transparent;
+	z-index:3;
+	cursor:pointer;
+}
+
+#dialog_close{
+	width:20px;
+	height:18px;
+	max-width:20px;
+	max-height:18px;
+	background-image:url('../images/close.gif');
+	background-repeat:no-repeat;
+	overflow:hidden;
+	background-position:2px 2px;
+	background-color:transparent;
+	border:none;
+	float:left;
+	cursor:pointer;
+}
+
+.disable_screen{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:silver;
+	-moz-opacity:.7;
+	opacity:.7;
+	filter:alpha(opacity=70);
+	z-index:4;
+}
+
+#initial_load{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#ffffff;
+	z-index:6;
+}
+
+.spinner{
+	width:30px;
+	height:30px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	z-index:6;
+	margin-left:-15px;
+	margin-top:-15px;
+}
+
+#header_menu{
+	width: 300px;
+	max-width: 800px;
+	overflow: hidden;
+	background-color:#000000;
+	border:none;
+	padding:0px;
+	margin:0px;
+	text-align:center;
+}
+
+.menuBtnNormal{
+	background-color: transparent;
+	border:none;
+	padding: 0px 5px 0px 5px;
+	margin:0px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.menuBtnOver{
+	background-color: #ffffff;
+	border:none;
+	padding: 0px 5px 0px 5px;
+	margin:0px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.menuBtnPressed{
+	background-color: #e4b904;
+	border:none;
+	padding: 0px 5px 0px 5px;
+	margin:0px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.MapNavigatorWindow{
+	width: 300px;
+	height: 300px;
+	max-width: 300px;
+	max-height: 300px;
+	overflow: hidden;
+	margin: 0px;
+	background-color: #dfdfdd;
+	border:none;
+	z-index: 3;
+}
+
+.mnwMap{
+/*	position:absolute;
+	top:50%;
+	left:50%; */
+	width:200px;
+	height:200px;
+/*	margin-left:-150px;
+	margin-top:-150px; */
+	overflow:hidden;
+    background-image:url('../images/mapPreview.gif');
+	background-repeat:no-repeat;
+	background-color:blue;
+	z-index: 3;
+}
+
+.mnwCurrentView{
+/*	position:absolute;
+	top:0px;
+	left:0px; */
+	width:50px;
+	height:50px;
+	margin-left:0px;
+	margin-top:0px;
+	overflow:hidden;
+	background-color:red;
+	border: 1px solid #dfdfdd;
+	-moz-opacity:.7;
+	opacity:.7;
+	filter:alpha(opacity=70);
+	cursor: move;
+}
+
+.mapElementPreviewDialog{
+	width: 307px;
+	height: 190px;
+	max-width: 307px;
+	max-height: 190px;
+	overflow: hidden;
+	position: absolute;
+	margin: 0px;
+    background-image:url('../images/info_cloud.gif');
+	background-repeat:no-repeat;
+	background-color:transparent;
+	border:none;
+}
+
+
+.mapElementReservateDialog{
+	width: 307px;
+	height: 190px;
+	max-width: 307px;
+	max-height: 190px;
+	overflow: hidden;
+	position: absolute;
+	margin: 0px;
+    background-image:url('../images/info_cloud_reservate.gif');
+	background-repeat:no-repeat;
+	background-color:transparent;
+	border:none;
+}
+
+.mapElementReservedDialog{
+	width: 307px;
+	height: 190px;
+	max-width: 307px;
+	max-height: 190px;
+	overflow: hidden;
+	position: absolute;
+	margin: 0px;
+    background-image:url('../images/info_cloud_reserved.gif');
+	background-repeat:no-repeat;
+	background-color:transparent;
+	border:none;
+}
+
+.mapElementPreviewDialogClose{
+	width: 11px;
+	height: 11px;
+	max-width: 11px;
+	max-height: 11px;
+	overflow: hidden;
+	position: absolute;
+	top: 10px;
+	left:285px;
+	margin: 0px;
+    background-image:url('../images/info_cloud_close.gif');
+	background-repeat:no-repeat;
+	background-color:red;
+	border:none;
+	cursor:pointer;
+}
+
+/* popup element classes */
+
+.popupElement{
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -50px;
+	margin-right: -50px;
+	background-color: #dfdfdd;
+	border:none;
+	z-index: 99999999;
+	cursor:default;	
+}
+
+.popupElementHeader{
+	width: 100%;
+	height: 20px;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+    background-image:url('../images/popup_header.gif');
+	background-repeat:repeat-x;
+	background-color: blue;
+	border:none;
+	cursor:default;
+}
+
+
+.popupElementTitle{
+	height: 20px;
+	max-height: 20px;
+	overflow: hidden;
+	margin: 0px;
+	background-color:transparent;
+	border:none;
+	color:#ffffff;
+	margin-left: 10px;
+	padding-top: 3px;
+	float:left;
+}
+
+.popupElementClose{
+	width: 20px;
+	height: 20px;
+	max-width: 20px;
+	max-height: 20px;
+	overflow: hidden;
+	margin: 0px;
+    background-image:url('../images/popup_close.gif');
+	background-repeat:no-repeat;
+	background-color:transparent;
+	border:none;
+	float:right;
+	cursor:pointer;
+}
+
+.popupElementContent{
+	overflow: auto;
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	margin: 0px;
+	background-color: #ffffff;
+	border:none;
+	cursor:default;
+}
+
+#nav_panel{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:300px;
+	max-width:300px;
+	height:100%;
+	max-height:100%;
+	overflow:hidden;
+	background-color:transparent;
+	z-index:3;
+}
+
+#nav_panel_bcg{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:300px;
+	max-width:300px;
+	height:100%;
+	max-height:100%;
+	overflow:hidden;
+	background-color:#ffffff;
+	z-index:2;
+	-moz-opacity:.8;
+	opacity:.8;
+	filter:alpha(opacity=80);
+}
+
+#np_header{
+	width:300px;
+	max-width:300px;
+	height:100px;
+	max-height:100px;
+	overflow:hidden;
+	 background-image:url('../images/header300.jpg');
+	background-repeat:no-repeat;
+	background-color:transparent;	
+}
+
+#np_navigator_wrapper{
+	width:300px;
+	max-width:300px;
+	height:300px;
+	max-height:300px;
+	overflow:hidden;
+	background-color:#dfdfdd;
+}
+
+.menuLine300x15{
+	width:300px;
+	max-width:300px;
+	height:15px;
+	max-height:15px;
+	overflow:hidden;
+	background-image:url('../images/menu_line_15.jpg');
+	background-repeat:repeat-x;
+	background-color:transparent;
+	cursor:pointer;	
+}

@@ -1,0 +1,7 @@
+/**
+ * @author mmazo
+ */
+
+function MapElementSettingsDialog(){
+	
+}
